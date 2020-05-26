@@ -14,8 +14,8 @@ verbose "Installing PostgreSQL 9.4"
 password=$(dd if=/dev/urandom bs=1 count=20 2>/dev/null | base64)
 
 #included in the distribution
-rpm -ivh --quiet http://yum.postgresql.org/9.4/redhat/rhel-7-x86_64/pgdg-centos94-9.4-3.noarch.rpm
 yum -y update
+rpm -ivh --quiet http://yum.postgresql.org/9.4/redhat/rhel-7-x86_64/pgdg-centos94-9.4-3.noarch.rpm
 yum -y install postgresql94-server postgresql94-contrib postgresql94
 
 #send a message
